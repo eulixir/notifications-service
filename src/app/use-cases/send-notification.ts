@@ -9,7 +9,7 @@ interface SendNotificationRequest {
   category: string;
 }
 
-interface SendNotificationResponse {
+interface SendNotificationResponsee {
   notification: Notification;
 }
 
@@ -19,7 +19,7 @@ export class SendNotification {
 
   async execute(
     request: SendNotificationRequest,
-  ): Promise<SendNotificationResponse> {
+  ): Promise<SendNotificationResponsee> {
     const { recipientId, content, category } = request;
 
     const notification = new Notification({
